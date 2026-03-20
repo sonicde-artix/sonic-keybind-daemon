@@ -1,10 +1,10 @@
 ---
-version: 6.6.3-1
+version: 6.6.3-2
 pkgbase:
   name: sonic-keybind-daemon
   pkgdesc: Daemon for Sonic-DE providing Global Keyboard Shortcut (Accelerator) functionality
   pkgver: 6.6.3
-  pkgrel: 1
+  pkgrel: 2
   url: https://github.com/Sonic-DE/sonic-globalacceld
   arch:
     - x86_64

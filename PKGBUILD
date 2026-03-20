@@ -3,7 +3,7 @@
 pkgname=sonic-keybind-daemon
 pkgver=6.6.3
 _dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=1
+pkgrel=2
 pkgdesc='Daemon for Sonic-DE providing Global Keyboard Shortcut (Accelerator) functionality'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-globalacceld'
