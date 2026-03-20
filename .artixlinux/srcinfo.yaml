@@ -1,0 +1,43 @@
+---
+version: 6.6.3-1
+pkgbase:
+  name: sonic-keybind-daemon
+  pkgdesc: Daemon for Sonic-DE providing Global Keyboard Shortcut (Accelerator) functionality
+  pkgver: 6.6.3
+  pkgrel: 1
+  url: https://github.com/Sonic-DE/sonic-globalacceld
+  arch:
+    - x86_64
+  groups:
+    - sonicde
+  license:
+    - LGPL-2.0-or-later
+  makedepends:
+    - extra-cmake-modules
+  depends:
+    - gcc-libs
+    - glibc
+    - kconfig
+    - kcoreaddons
+    - kcrash
+    - kdbusaddons
+    - kglobalaccel
+    - kio
+    - kjobwidgets
+    - kservice
+    - kwindowsystem
+    - libx11
+    - libxcb
+    - qt6-base
+    - xcb-util-keysyms
+  provides:
+    - kglobalacceld
+  conflicts:
+    - kglobalacceld
+  source:
+    - sonic-keybind-daemon-6.6.3.tar.gz::https://github.com/Sonic-DE/sonic-globalacceld/archive/refs/tags/6.6.3.tar.gz
+  sha256sums:
+    - ced39bb68b0d7517f582ef50f44b95a994324b2876c0c52f7dae10ba38cff25d
+pkgname:
+  - name: sonic-keybind-daemon
+# generated with artixpkg 0.38.2-1-any
