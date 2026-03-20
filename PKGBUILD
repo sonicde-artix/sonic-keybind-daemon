@@ -14,7 +14,7 @@ depends=(gcc-libs
          kcoreaddons
          kcrash
          kdbusaddons
-         kglobalaccel
+         sonic-frameworks-keybind
          kio
          kjobwidgets
          kservice
