@@ -1,33 +1,35 @@
-# Maintainer: artist for Sonic-DE
+# Maintainer: artist for Artix Linux
 
 pkgname=sonic-keybind-daemon
-pkgver=6.6.3
-_dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=2
-pkgdesc='Daemon for Sonic-DE providing Global Keyboard Shortcut (Accelerator) functionality'
+pkgver=6.6.5
+pkgrel=1
+_commit="4fbd9877efda72e5c46715de15edf20184534126"
+pkgdesc='Daemon for Artix Linux providing Global Keyboard Shortcut (Accelerator) functionality'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-globalacceld'
 license=(LGPL-2.0-or-later)
-depends=(gcc-libs
-         glibc
+depends=(glibc
          kconfig
-         kcoreaddons
          kcrash
          kdbusaddons
-         sonic-frameworks-keybind
-         kio
          kjobwidgets
          kservice
-         kwindowsystem
+         libgcc
          libx11
          libxcb
          qt6-base
+         sonic-frameworks-core-addons
+         sonic-frameworks-io
+         sonic-frameworks-keybind
+         sonic-frameworks-windowsystem
          xcb-util-keysyms)
 makedepends=(extra-cmake-modules)
 groups=(sonicde)
 conflicts=(kglobalacceld)
 provides=(kglobalacceld)
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/$_dirver.tar.gz")
+replaces=(kglobalacceld)
+makedepends+=(git)
+source=("$pkgname-$pkgver::git+$url.git#commit=$_commit")
 
 build() {
   cmake -B build  -S $pkgname-$pkgver \
@@ -42,5 +44,5 @@ package() {
   rm -r $pkgdir/usr/lib/systemd
 }
 
-sha256sums=('ced39bb68b0d7517f582ef50f44b95a994324b2876c0c52f7dae10ba38cff25d')
+sha256sums=('4c8149da114ff364ed2c8a77a53eb44cc33e86b0a851c02cbe2635ed5ecceaaa')
 
