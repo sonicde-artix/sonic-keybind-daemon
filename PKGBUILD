@@ -3,7 +3,7 @@
 
 pkgname=sonic-keybind-daemon
 pkgver=6.6.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Daemon for Artix Linux providing Global Keyboard Shortcut (Accelerator) functionality'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-keybind-daemon'
@@ -29,7 +29,7 @@ conflicts=(kglobalacceld)
 provides=(kglobalacceld)
 replaces=(kglobalacceld)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('4c8149da114ff364ed2c8a77a53eb44cc33e86b0a851c02cbe2635ed5ecceaaa')
+sha256sums=('4218fdcde99b3a094cd145cb5ddfa055e999d09d0c06c3bcf67d3724cac6e8ed')
 
 build() {
   cmake -B build  -S $pkgname-$pkgver \
